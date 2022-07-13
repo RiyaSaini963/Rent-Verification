@@ -1,0 +1,45 @@
+
+h1
+{
+    color: green;
+    font-style: Britannic Bold;
+}
+h3{
+   margin-left: 560px;
+   color: green;
+}
+.formstyle{
+    background-color: lightgoldenrodyellow;
+    border: 5px;
+    height: auto;
+    width: auto;
+    alignment-adjust: central;
+    
+  
+}
+p{
+    font-size: 20px;
+}
+td{
+    font-size: 20px;
+    height: 40px;
+    color: green;
+}
+.sub{
+    margin-left: 860px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: green;
+    color: white;
+  
+    
+}
+.sub1:hover
+{
+     background: green;
+    border: none;
+    color: white;
+    box-shadow: 5px 5px 10px green;
+    
+}

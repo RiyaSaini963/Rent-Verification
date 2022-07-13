@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>phn</servlet-name>
+        <servlet-class>phn</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>diplay_detail</servlet-name>
+        <servlet-class>diplay_detail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>phn</servlet-name>
+        <url-pattern>/phn</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>diplay_detail</servlet-name>
+        <url-pattern>/diplay_detail</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

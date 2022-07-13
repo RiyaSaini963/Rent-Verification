@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="app_type.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $("input[name='choice']").click(function(){
+                    if($('#radio2').is(":checked")){
+                        $("#phn").show();
+                        $("#new").hide();
+                    }
+                    else if($('#radio1').is(":checked")){
+                        $("#new").show();
+                        $("#phn").hide();
+                    }
+                    else{
+                        $("#phn").show();
+                        $("#new").hide();
+                    }
+                });
+            });
+            
+            </script>
+            <script>
+                    function changecat() {
+    var selectHTML = "";
+
+    var A = ["East Godavari","West Godavari","Krishna","Guntur","Prakasam","Sri Potti Sri Ramulu Nellore","Srikakulam","Vizianagaram","Visakhapatnam"];;
+    var B = ["South Delhi","West Delhi","East Delhi","North Delhi","New Delhi"];
+    var C = ["Ambala","Bhiwani","Charkhi Dadri","Faridabad","Fatehabad","Gurugram","Hisar","Jhajjar","Jind","Kaithal","Karnal","Kurukshetra","Mahendragarh","Nuh","Palwal","Panchkula","Panipat","Rewari"];
+    var D = ["Amritsar","Barnala","Bathinda","Faridkot","Fatehgarh Sahib","Fazilka","Ferozepur","Gurdaspur","Hoshiarpur","Jalandhar","Ludhiana","Mansa","Moga","Muktsar","Nawanshahr","Patiala","Rupnagar"," Sangrur"];
+
+    if (document.getElementById("state").value == "A") {
+        var select = document.getElementById('District').options.length;
+
+        for (var i = 0; i < select; i++) {
+            document.getElementById('District').options.remove(i);
+        }
+
+        for (var i = 0; i < A.length; i++) {
+            var newSelect = document.createElement('option');
+            selectHTML = "<option value='" + A[i] + "'>" + A[i] + "</option>";
+            newSelect.innerHTML = selectHTML;
+            document.getElementById('District').add(newSelect);
+        }
+    }
+
+    else if (document.getElementById("state").value == "B") {
+        var select = document.getElementById('District').options.length;
+
+        for (var i = 0; i < select; i++) {
+            document.getElementById('District').options.remove(i);
+        }
+
+        for (var i = 0; i < B.length; i++) {
+            var newSelect = document.createElement('option');
+            selectHTML = "<option value='" + B[i] + "'>" + B[i] + "</option>";
+            newSelect.innerHTML = selectHTML;
+            document.getElementById('District').add(newSelect);
+        }
+    }
+
+   else if (document.getElementById("state").value == "C") {
+        var select = document.getElementById('District').options.length;
+
+        for (var i = 0; i < select; i++) {
+            document.getElementById('District').options.remove(i);
+        }
+
+        for (var i = 0; i < C.length; i++) {
+            var newSelect = document.createElement('option');
+            selectHTML = "<option value='" + C[i] + "'>" + C[i] + "</option>";
+            newSelect.innerHTML = selectHTML;
+            document.getElementById('District').add(newSelect);
+        }
+    }
+    else if (document.getElementById("state").value == "D") {
+        var select = document.getElementById('District').options.length;
+
+        for (var i = 0; i < select; i++) {
+            document.getElementById('District').options.remove(i);
+        }
+
+        for (var i = 0; i < D.length; i++) {
+            var newSelect = document.createElement('option');
+            selectHTML = "<option value='" + D[i] + "'>" + D[i] + "</option>";
+            newSelect.innerHTML = selectHTML;
+            document.getElementById('District').add(newSelect);
+        }
+    }
+    
+}        
+
+            </script>
+        
+    </head>
+    <body>
+        <div class="container-contact3">
+			<div class="wrap-contact3">
+				<form class="contact3-form validate-form">
+                                    <span class="contact3-form-title">
+						APPLICATION TYPE
+					</span>
+                                    <div class="wrap-contact3-form-radio">
+						<div class="contact3-form-radio">
+							<input class="input-radio3" id="radio1" type="radio" name="choice" value="say-hi" >
+							<label class="label-radio3" for="radio1">
+								New
+							</label>
+						</div>
+
+						<div class="contact3-form-radio">
+							<input class="input-radio3" id="radio2" type="radio" name="choice" value="get-quote" checked="checked">
+							<label class="label-radio3" for="radio2">
+								Renewal
+							</label>
+						</div>
+					</div>                                    
+                                </form>
+                            <div class="wrap-input3 validate-input" id="phn">
+                                <form method="post" action="phn">
+			     <input class="input3" type="text" name="name" placeholder="Your Phone Number">
+                             <br><br>
+                             <div class="container-contact3-form-btn">
+    <button class="contact3-form-btn">
+							Submit
+						</button>
+					</div>
+                                </form>
+
+			    </div>
+                            <div class="wrap-input3 validate-input" id="new">
+                                <form method="get" action="phn">
+                                <div class="wrap-contact3-form-radio">
+						<div class="contact3-form-radio">
+							<input class="input-radio3" id="radio3" type="radio" name="new_app" value="Residence" checked="checked" >
+							<label class="label-radio3" for="radio3">
+								Residence
+							</label>
+						</div>
+
+						<div class="contact3-form-radio">
+							<input class="input-radio3" id="radio4" type="radio" name="new_app" value="Non-Residence" >
+							<label class="label-radio3" for="radio4">
+								Non-Residence/NRI
+							</label>
+						</div>
+					</div>
+                                <div class="wrap-input3 input3-select">
+						<div>
+                                                    Select State:
+<select class="selection-2" name="state" id="state" onchange="changecat();">
+    <option value="">Select</option>
+    <option value="A">Andhra Pradesh</option>
+    <option value="B">Delhi</option>
+    <option value="C">Punjab</option>
+    <option value="D">Haryana</option>
+</select>
+<br>
+Select District:
+<select class="selection-2" name="District" id="District">
+    <option value="">Select</option>
+</select>						</div>
+
+                            </div>
+                              <div class="container-contact3-form-btn">
+    <button class="contact3-form-btn">
+							Submit
+						</button>
+					</div>
+                                </form>
+  
+                        </div>
+                            
+                        </div>
+        </div>
+    </body>
+</html>
